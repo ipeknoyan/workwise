@@ -1,56 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.0 on darwin)" generated="20230425 16:10:14.072" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.0 on darwin)" generated="20230425 17:03:11.794" rpa="false" schemaversion="3">
 <suite id="s1" name="jobSucheTests" source="/Users/ipekeroglu/PycharmProjects/workwise/Tests/jobSucheTests.robot">
-<test id="s1-t1" name="Open the Page" line="14">
-<kw name="Navigate Job Suche Page" library="common">
+<test id="s1-t1" name="Click Aushilfe from “Anstellungsart”-Filter" line="14">
+<kw name="Navigate Job Suche Page" library="common" type="SETUP">
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230425 16:10:14.160" level="INFO">Opening browser 'Chrome' to base url 'https://www.workwise.io/jobsuche'.</msg>
-<msg timestamp="20230425 16:10:14.160" level="INFO">Executing: /Users/ipekeroglu/PycharmProjects/workwise/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
-<status status="PASS" starttime="20230425 16:10:14.160" endtime="20230425 16:10:27.143"/>
+<msg timestamp="20230425 17:03:11.887" level="INFO">Opening browser 'Chrome' to base url 'https://www.workwise.io/jobsuche'.</msg>
+<msg timestamp="20230425 17:03:11.887" level="INFO">Executing: /Users/ipekeroglu/PycharmProjects/workwise/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230425 17:03:11.886" endtime="20230425 17:03:24.523"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${acceptCookies_button}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20230425 16:10:27.143" endtime="20230425 16:10:29.966"/>
-</kw>
-<status status="PASS" starttime="20230425 16:10:14.160" endtime="20230425 16:10:29.966"/>
+<status status="PASS" starttime="20230425 17:03:24.523" endtime="20230425 17:03:27.737"/>
 </kw>
 <kw name="Accept Cookies" library="cookiesPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${acceptCookies_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230425 16:10:29.967" level="INFO">Clicking element 'xpath://span[@class='sc-2c82bd37-0 jxJAYJ'][contains(text(),'Alle akzeptieren')]'.</msg>
-<status status="PASS" starttime="20230425 16:10:29.967" endtime="20230425 16:10:32.028"/>
+<msg timestamp="20230425 17:03:27.738" level="INFO">Clicking element 'xpath://span[@class='sc-2c82bd37-0 jxJAYJ'][contains(text(),'Alle akzeptieren')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:27.737" endtime="20230425 17:03:29.568"/>
 </kw>
-<status status="PASS" starttime="20230425 16:10:29.966" endtime="20230425 16:10:32.028"/>
+<status status="PASS" starttime="20230425 17:03:27.737" endtime="20230425 17:03:29.568"/>
 </kw>
-<kw name="Select “Aushilfe” in “Anstellungsart”-Filter" library="jobSuchePage">
+<status status="PASS" starttime="20230425 17:03:11.886" endtime="20230425 17:03:29.568"/>
+</kw>
+<kw name="Select “Aushilfe” in “Anstellungsart”" library="jobSuchePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Anstellungsart_list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 17:03:29.569" level="INFO">Clicking element 'xpath://button[@class='sc-7e0b2387-2 eawuQn']/div[contains(text(),'Anstellungsart')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:29.569" endtime="20230425 17:03:30.648"/>
+</kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${aushilfe_checkbox}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230425 16:10:32.028" level="INFO">Clicking element 'xpath://button[@class='sc-7e0b2387-2 eawuQn']/div[contains(text(),'Anstellungsart')]'.</msg>
-<status status="PASS" starttime="20230425 16:10:32.028" endtime="20230425 16:10:33.015"/>
+<msg timestamp="20230425 17:03:30.649" level="INFO">Clicking element 'xpath://*[@class='sc-2c82bd37-0 CknIy']/span[contains(text(),'Aushilfe')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:30.648" endtime="20230425 17:03:30.745"/>
 </kw>
-<status status="PASS" starttime="20230425 16:10:32.028" endtime="20230425 16:10:33.015"/>
+<status status="PASS" starttime="20230425 17:03:29.568" endtime="20230425 17:03:30.745"/>
 </kw>
-<status status="PASS" starttime="20230425 16:10:14.159" endtime="20230425 16:10:33.016"/>
+<kw name="Click Filter" library="jobSuchePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${filter_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 17:03:30.746" level="INFO">Clicking element 'xpath://button[@class='sc-7e0b2387-2 yOLDo'][contains(text(),'Filter anwenden')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:30.746" endtime="20230425 17:03:31.779"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:30.745" endtime="20230425 17:03:31.780"/>
+</kw>
+<kw name="Assert “Aushilfe” was selected" library="jobSuchePage">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${aseert_aushilfe}</arg>
+<arg>timeout=5</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230425 17:03:32.959" level="INFO">Element 'xpath://div[@class='sc-2c82bd37-0 hUbmzs'][contains(text(),'Aushilfe')]' is displayed.</msg>
+<status status="PASS" starttime="20230425 17:03:31.780" endtime="20230425 17:03:32.959"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:31.780" endtime="20230425 17:03:32.959"/>
+</kw>
+<kw name="Close Page" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230425 17:03:32.960" endtime="20230425 17:03:33.039"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:32.960" endtime="20230425 17:03:33.039"/>
+</kw>
+<doc>This test case verifies that the user is able to successfully select Aushilfe from Filter List</doc>
+<tag>E2E</tag>
+<tag>JobSuchePageTests</tag>
+<status status="PASS" starttime="20230425 17:03:11.886" endtime="20230425 17:03:33.039"/>
 </test>
-<status status="PASS" starttime="20230425 16:10:14.073" endtime="20230425 16:10:33.016"/>
+<test id="s1-t2" name="Clear all filters by clicking “Alle Filter zurücksetzen” button" line="21">
+<kw name="Navigate Job Suche Page" library="common" type="SETUP">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${site_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230425 17:03:33.040" level="INFO">Opening browser 'Chrome' to base url 'https://www.workwise.io/jobsuche'.</msg>
+<msg timestamp="20230425 17:03:33.041" level="INFO">Executing: /Users/ipekeroglu/PycharmProjects/workwise/venv/lib/python3.11/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<status status="PASS" starttime="20230425 17:03:33.040" endtime="20230425 17:03:45.032"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${acceptCookies_button}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230425 17:03:45.032" endtime="20230425 17:03:47.940"/>
+</kw>
+<kw name="Accept Cookies" library="cookiesPage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${acceptCookies_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 17:03:47.941" level="INFO">Clicking element 'xpath://span[@class='sc-2c82bd37-0 jxJAYJ'][contains(text(),'Alle akzeptieren')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:47.941" endtime="20230425 17:03:50.008"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:47.941" endtime="20230425 17:03:50.008"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:33.039" endtime="20230425 17:03:50.008"/>
+</kw>
+<kw name="Select “Aushilfe” in “Anstellungsart”" library="jobSuchePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Anstellungsart_list}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 17:03:50.009" level="INFO">Clicking element 'xpath://button[@class='sc-7e0b2387-2 eawuQn']/div[contains(text(),'Anstellungsart')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:50.009" endtime="20230425 17:03:50.676"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${aushilfe_checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 17:03:50.676" level="INFO">Clicking element 'xpath://*[@class='sc-2c82bd37-0 CknIy']/span[contains(text(),'Aushilfe')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:50.676" endtime="20230425 17:03:50.927"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:50.008" endtime="20230425 17:03:50.927"/>
+</kw>
+<kw name="Reset Filters" library="jobSuchePage">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${resetFilter_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230425 17:03:50.927" level="INFO">Clicking element 'xpath://button[@class='sc-7e0b2387-2 kIKEkx'][contains(text(),'Filter zurücksetzen')]'.</msg>
+<status status="PASS" starttime="20230425 17:03:50.927" endtime="20230425 17:03:51.278"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:50.927" endtime="20230425 17:03:51.278"/>
+</kw>
+<kw name="Close Page" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230425 17:03:51.278" endtime="20230425 17:03:51.352"/>
+</kw>
+<status status="PASS" starttime="20230425 17:03:51.278" endtime="20230425 17:03:51.352"/>
+</kw>
+<doc>This test case verifies that the user is able to successfully clear all filters with Filter zurücksetzen</doc>
+<tag>E2E</tag>
+<tag>JobSuchePageTests</tag>
+<status status="PASS" starttime="20230425 17:03:33.039" endtime="20230425 17:03:51.352"/>
+</test>
+<status status="PASS" starttime="20230425 17:03:11.794" endtime="20230425 17:03:51.353"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="2" fail="0" skip="0">E2E</stat>
+<stat pass="2" fail="0" skip="0">JobSuchePageTests</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="jobSucheTests">jobSucheTests</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="jobSucheTests">jobSucheTests</stat>
 </suite>
 </statistics>
 <errors>
