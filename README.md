@@ -8,6 +8,7 @@
     
    ***Define an easy and unified way to execute test cases***<br> 
     To run tests please execute the commands below<br>
+      Install chromedriver
       pip install -r requirements.txt<br>
       robot -d results Tests/jobSucheTests.robot<br>
       
@@ -15,6 +16,7 @@
     Install Python<br> 
     Install Pycharm IDE<br>
     Install pip<br>
+    Install chromedriver
     pip install -r requirements.txt<br>
     
     
